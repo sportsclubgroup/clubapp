@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
-import { Form, FormGroup, Input, Label, Button } from 'reactstrap';
 import axios from 'axios';
 import './ContactUs.css';
 
-class ContactUs extends Component { 
+class Contactus extends Component {
     state = {
-        name: '',
+        firstname: '',
+        lastname: '',
         email: '',
         sent: false
     }
 
     // handle inputs
-    handleName = (e) => { 
+    handleFirstName = (e) => { 
         this.setState({
-            name: e.target.value
+            firstname: e.target.value
+        })
+    }
+    handleLastName = (e) => { 
+        this.setState({
+            lastname: e.target.value
         })
     }
     handleEmail = (e) => { 
@@ -31,12 +36,13 @@ class ContactUs extends Component {
         e.preventDefault();
 
         let data = {
-            name: this.state.name,
+            firstname: this.state.firstname,
+            lastname: this.state.lastname,
             email: this.state.email,
             message: this.state.message
         }
 
-        axios.post('/api/forma', data)
+        axios.post('/api/form', data)
             .then(res => { 
                 this.setState({ 
                     sent: true,
@@ -50,7 +56,8 @@ class ContactUs extends Component {
     // reseting initial data
     resetForm = () => { 
         this.setState({
-            name: '',
+            firstname: '',
+            lastname: '',
             email: '',
             message: ''
         })
@@ -61,39 +68,53 @@ class ContactUs extends Component {
             })
         }, 3000)
     }
+
     render() { 
         return (
-            <section className="col-md-6 cu-bg">
-                <div className="container cu-form">
-                    <h1>Contact Form</h1>
-                    <Form onSubmit={this.handleSubmit}>
-					<FormGroup>
-                        <Label for="name">Name</Label>
-                        <Input type="text"
-						name="name" placeholder="Name"
-						onChange={this.handleChange} />  
-                    </FormGroup>
-					<FormGroup>
-                        <Label for="email">Email</Label>
-                        <Input type="email"
-						name="email" placeholder="Email"
-						onChange={this.handleChange} />  
-                    </FormGroup>
-					<FormGroup>
-                        <Label for="message">Message</Label>
-                        <Input type="textarea" col="30" rows="5" placeholder="Your Message"
-						name="message"
-						onChange={this.handleChange} />  
-                    </FormGroup>
-					</Form>
+            <div className="cu-bg">
+            <div className=" cu-container"><h2>Contact Us</h2>
+                <form onSubmit={this.formSubmit}>
+                    <div className="singleItem">
+                        <label htmlFor="firstname">First Name</label>
+                        <input type="text" name="firstname" className="firstname" placeholder="First Name"
+                            value={this.state.firstname}
+                            onChange={this.handleFirstName}
 
-                    <div className="FormGroup">
-                        <Button className="btn btn-primary btn-block">Submit</Button>
+                        />
                     </div>
+
+                    <div className="singleItem">
+                        <label htmlFor="lastname">Last Name</label>
+                        <input type="text" name="lastname" className="lastname" placeholder="Last Name"
+                        value={this.state.lastname}
+                            onChange={this.handleLastName}
+                        />
+                    </div>
+
+                    <div className="singleItem">
+                        <label htmlFor="email">Email</label>
+                        <input type="text" name="email" className="name" placeholder="Email" 
+                        value={this.state.email}
+                            onChange={this.handleEmail}/>
+                    </div>
+
+                    <div className="textArea singleItem">
+                        <label htmlFor="message">Message</label>
+                        <textarea name="message" id="" cols="30" rows="5" placeholder="Message"
+                        value={this.state.message}
+                            onChange={this.handleMessage}
+                        ></textarea>
+                    </div>
+                    <div className={this.state.sent ?'msg msgAppear':'msg'}>Message has been sent</div>
+                    <div className="btn">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+
                 </div>
-            </section>
+                </div>
         );
     }
 }
 
-export default ContactUs;
+export default Contactus;
