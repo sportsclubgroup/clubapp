@@ -27,10 +27,10 @@ const Footer = () => {
                 <div className="right-section"><div><h5>Home Ground Map</h5></div><a target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/FWzKQPqTcn4tjFjCA"><img alt="Location on Map" src={Ground} title="Location on Map"></img></a></div>
                 <div className="sm-icons"><h5>Follow us on</h5>
                 <ul>
-                    <li><i class="fa fa-facebook-square" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-youtube-square" aria-hidden="true"></i></li>
-                        <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                    <li><i className="fa fa-facebook-square" aria-hidden="true"></i></li>
+                        <li><i className="fa fa-whatsapp" aria-hidden="true"></i></li>
+                        <li><i className="fa fa-youtube-square" aria-hidden="true"></i></li>
+                        <li><i className="fa fa-instagram" aria-hidden="true"></i></li>
                 </ul>
             </div>
             </div>

@@ -1,6 +1,19 @@
-h3 span{
-    font-weight: 700;
+.row{
+    height: 40vh;
+    border: 2px solid red;
 }
-h3{
-    font-size: 28px;
+.col-lg-8{
+    height: 39vh;
+    border: 2px solid black;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+.col-lg-4{
+    height: 39vh;
+    border: 2px solid black;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+.points-table{
+    border: 2px solid red;
 }

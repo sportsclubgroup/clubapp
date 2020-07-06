@@ -1,6 +1,6 @@
 import React from 'react';
 import './Nextmatch.css';
-import Tablebg from './assets/table_bg/match-bg.jpg'
+import Tablebg from './assets/table_bg/match-bg2.jpg'
 
 const Nextmatch = () => { 
     return (
