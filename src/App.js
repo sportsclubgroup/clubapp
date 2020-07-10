@@ -8,7 +8,10 @@ import Home from './components/Home/Home';
 import Club from './components/Club/Club';
 import Fixture from './components/Fixture/Fixture';
 import ContactUs from './components/ContactUs/ContactUs';
+import Member from './components/Member/Member';
+import Login from './components/Login/Login';
 import Footer from './components/Footer/Footer';
+
 
 class App extends Component {
 
@@ -41,7 +44,10 @@ class App extends Component {
           <main className="main-content"> <Route exact path='/' component={Home} />
           <Route path='/club' component={Club} />
           <Route path='/fixture' component={Fixture} />
-          <Route path='/contact' component={ContactUs} /></main>
+            <Route path='/contact' component={ContactUs} />
+            <Route path='/member' component={Member} />
+            <Route path='/login' component={Login} />
+          </main>
         <footer> <Footer /> </footer>
         
         </div>

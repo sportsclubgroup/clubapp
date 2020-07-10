@@ -23,6 +23,11 @@ const navbar = (props) => {
                         <li><NavLink to="/contact">Contact</NavLink></li>
                     </ul>
                 </div>
+                <div className="navbar_navigation-items">
+                    <ul className="login-btn">
+                        <li><NavLink to="/Login">Login</NavLink></li>
+                    </ul>
+                </div>
             </nav>
         </header>
     );

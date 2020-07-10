@@ -26,6 +26,10 @@
     padding: 0 1rem;
 }
 
+.login-btn{
+    font-size: large;
+}
+
 .navbar_navigation-items a{
     text-decoration: none;
     color: white;

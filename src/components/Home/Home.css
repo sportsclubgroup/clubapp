@@ -15,6 +15,12 @@ img{
     /* border-style: solid;
     border-color: white; */
 }
+.btn-reg{
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    font-weight: 800;
+}
 
 @media (max-width: 2600px){
     .h-container{
@@ -29,8 +35,14 @@ img{
     }
     h4{font-size: 1.2rem;}
     h2{font-size: 1.8rem;}
+
+    .btn-reg{
+        top: 50%;
+        left: 43%;
+        font-weight: 700;
+    }
 }
 @media (max-width: 620px){
     h4{font-size: 1rem;}
-    h2{font-size: 1.5rem;}
+    h2{font-size: 1.5rem;}  
 }
