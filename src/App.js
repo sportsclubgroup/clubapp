@@ -9,6 +9,7 @@ import Club from './components/Club/Club';
 import Fixture from './components/Fixture/Fixture';
 import ContactUs from './components/ContactUs/ContactUs';
 import Footer from './components/Footer/Footer';
+import Players from './components/Players/Players';
 
 class App extends Component {
 
@@ -41,6 +42,7 @@ class App extends Component {
           <main className="main-content"> <Route exact path='/' component={Home} />
           <Route path='/club' component={Club} />
           <Route path='/fixture' component={Fixture} />
+          <Route path='/Players' component={Players} />
           <Route path='/contact' component={ContactUs} /></main>
         <footer> <Footer /> </footer>
         
